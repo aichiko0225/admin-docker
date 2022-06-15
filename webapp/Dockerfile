@@ -9,5 +9,5 @@ RUN yarn && yarn build
 
 FROM nginx
 EXPOSE 3000
-COPY ./nginx/web_default.conf /etc/nginx/conf.d/default.conf
+# COPY ./nginx/web_default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /webapp/build /usr/share/nginx/html
